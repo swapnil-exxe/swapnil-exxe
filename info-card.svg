@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 430" width="490" height="430">
+  <style>
+    .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; rx: 8px; }
+    .header-bar { fill: #161b22; }
+    .dot-red { fill: #ff5f56; }
+    .dot-yellow { fill: #ffbd2e; }
+    .dot-green { fill: #27c93f; }
+    .title { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; fill: #8b949e; }
+    .term-text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; }
+    .user-header { font-weight: bold; fill: #58a6ff; }
+    .divider { fill: #30363d; }
+    .key { font-weight: bold; fill: #79c0ff; }
+    .val { fill: #c9d1d9; }
+    .cursor { fill: #58a6ff; }
+    @keyframes lineFadeIn {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .stagger-line {
+      opacity: 0;
+      animation: lineFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .cursor { animation: blink 1s infinite; }
+  </style>
+  <rect class="bg" x="0.5" y="0.5" width="489" height="429" rx="8"/>
+  <path class="header-bar" d="M1 1h488v28H1z" rx="8"/>
+  <circle class="dot-red" cx="16" cy="14" r="4"/>
+  <circle class="dot-yellow" cx="28" cy="14" r="4"/>
+  <circle class="dot-green" cx="40" cy="14" r="4"/>
+  <text class="title" x="245.0" y="17" text-anchor="middle">swapnil ~ neofetch</text>
+  <g class="stagger-line" style="animation-delay: 0.00s;">
+    <text class="term-text user-header" x="24" y="60">swapnil@github</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.08s;">
+    <text class="term-text divider" x="24" y="78">------------------</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.16s;">
+    <text class="term-text key" x="24" y="104">OS:</text>
+    <text class="term-text val" x="129" y="104">macOS Sonoma / Arch Linux</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.24s;">
+    <text class="term-text key" x="24" y="126">Host:</text>
+    <text class="term-text val" x="129" y="126">GitHub Profile Workspace</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.32s;">
+    <text class="term-text key" x="24" y="148">Uptime:</text>
+    <text class="term-text val" x="129" y="148">Always coding</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.40s;">
+    <text class="term-text key" x="24" y="170">Role:</text>
+    <text class="term-text val" x="129" y="170">Software Engineer &amp; Builder</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.48s;">
+    <text class="term-text key" x="24" y="192">Languages:</text>
+    <text class="term-text val" x="129" y="192">Python, TypeScript, Go, C++, SQL</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.56s;">
+    <text class="term-text key" x="24" y="214">Frameworks:</text>
+    <text class="term-text val" x="129" y="214">FastAPI, React, Next.js, Node.js</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.64s;">
+    <text class="term-text key" x="24" y="236">Tools:</text>
+    <text class="term-text val" x="129" y="236">Docker, Git, Linux, Kubernetes, AWS</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.72s;">
+    <text class="term-text key" x="24" y="258">Focus:</text>
+    <text class="term-text val" x="129" y="258">AI Agents, Distributed Systems, Open Source</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.80s;">
+    <text class="term-text key" x="24" y="280">Location:</text>
+    <text class="term-text val" x="129" y="280">Mumbai, India</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.88s;">
+    <text class="term-text key" x="24" y="302">Contact:</text>
+    <text class="term-text val" x="129" y="302">swapnil.patil24@spit.ac.in</text>
+  </g>
+  <g class="stagger-line" style="animation-delay: 0.96s;">
+    <rect x="24" y="334" width="20" height="12" rx="2" fill="#21262d"/>
+    <rect x="48" y="334" width="20" height="12" rx="2" fill="#ff7b72"/>
+    <rect x="72" y="334" width="20" height="12" rx="2" fill="#7ee787"/>
+    <rect x="96" y="334" width="20" height="12" rx="2" fill="#f2cc60"/>
+    <rect x="120" y="334" width="20" height="12" rx="2" fill="#58a6ff"/>
+    <rect x="144" y="334" width="20" height="12" rx="2" fill="#d2a8ff"/>
+    <rect x="168" y="334" width="20" height="12" rx="2" fill="#79c0ff"/>
+    <rect x="192" y="334" width="20" height="12" rx="2" fill="#f0f6fc"/>
+  </g>
+  <g class="stagger-line" style="animation-delay: 1.04s;">
+    <text class="term-text user-header" x="24" y="364">$</text>
+    <rect class="cursor" x="38" y="353" width="7" height="13"/>
+  </g>
+</svg>
