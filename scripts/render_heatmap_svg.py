@@ -16,8 +16,8 @@ HERE = os.path.dirname(__file__)
 IN_PATH = os.path.join(HERE, "..", "data", "contributions.json")
 OUT_PATH = os.path.join(HERE, "..", "contrib-heatmap.svg")
 
-# GitHub-ish green ramp: empty -> brightest. Level 5 is a brighter neon top end.
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+# GitHub original green ramp: 0 (empty) -> 4 (brightest)
+PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
 CELL = 12
 GAP = 3
@@ -29,10 +29,10 @@ TITLEBAR_H = 30
 
 BG = "#0a0e14"
 BG2 = "#0d1420"
-FRAME = "#1f6feb"
+FRAME = "#30363d"
 MUTED = "#7d8590"
 TEXT = "#e6edf3"
-ACCENT = "#22d3ee"
+ACCENT = "#58a6ff"
 GREEN = "#39d353"
 GOLD = "#f2cc60"
 
@@ -40,20 +40,6 @@ GOLD = "#f2cc60"
 COL_T = 0.018   # per-column delay contribution (left -> right sweep)
 ROW_T = 0.045   # per-row delay contribution (top -> bottom cascade)
 CELL_DUR = 0.42
-
-
-def level_for(count):
-    if count == 0:
-        return 0
-    if count <= 5:
-        return 1
-    if count <= 15:
-        return 2
-    if count <= 30:
-        return 3
-    if count <= 50:
-        return 4
-    return 5
 
 
 def build_grid(days):
@@ -66,7 +52,8 @@ def build_grid(days):
         weekday = (date.weekday() + 1) % 7
         while len(col) < weekday:
             col.append(None)
-        col.append((d["date"], d["count"], level_for(d["count"])))
+        lvl = min(len(PALETTE) - 1, max(0, int(d.get("level", 0))))
+        col.append((d["date"], d["count"], lvl))
         if len(col) == 7:
             grid.append(col)
             col = []
@@ -125,7 +112,7 @@ def render(data):
     for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
         parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
     parts.append(f'<text x="{canvas_w/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" font-size="12" '
-                 f'text-anchor="middle">avi@github: ~/contributions --graph</text>')
+                 f'text-anchor="middle">swapnil@github: ~/contributions --graph</text>')
 
     grid_top = TITLEBAR_H + TOP_LABEL_H
     grid_left = PAD + LEFT_LABEL_W

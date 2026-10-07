@@ -31,10 +31,8 @@
 
 <p><b>Software Engineer · AI Builder</b></p>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-avivashishta.com-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://www.avivashishta.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-avivashishta-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/avivashishta)
-[![Instagram](https://img.shields.io/badge/Instagram-avi__vashishta29-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/avi_vashishta29)
-[![Live Terminal](https://img.shields.io/badge/⚡_Live_Terminal-avivashishta29.github.io-22d3ee?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://avivashishta29.github.io)
+[![GitHub](https://img.shields.io/badge/GitHub-swapnil--exxe-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/swapnil-exxe)
+[![Email](https://img.shields.io/badge/Email-swapnil.patil24%40spit.ac.in-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:swapnil.patil24@spit.ac.in)
 
 <br>
 
